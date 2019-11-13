@@ -9,10 +9,16 @@ main.o: main.c $(DEPS)
 input.o: input.c $(DEPS)
 	gcc -c input.c $(DFLAGS)
 
-# Compila usando opciones que facilitan la depuración
+# Compila usando la opción -g para facilitar la depuración con gdb.
 .PHONY: debug
-debug: DFLAGS = -g -fsanitize=address,undefined
+debug: DFLAGS = -g
 debug: clean programa
+
+# Compila habilitando la herramienta AddressSanitizer para
+# facilitar la depuración en tiempo de ejecución.
+.PHONY: sanitize
+sanitize: DFLAGS = -fsanitize=address,undefined
+sanitize: clean programa
 
 .PHONY: clean
 clean:
