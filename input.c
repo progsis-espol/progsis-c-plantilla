@@ -18,7 +18,7 @@ int get_from_console(char **line)
 	l = getline(line, &n, stdin); //getline llama a malloc internamente
 
 	if(l > 0)
-		*(line[l-1]) = '\0'; //Sobreescribe el salto de línea
+		(*line)[l-1] = '\0'; //Sobreescribe el salto de línea
 	else
 		return l;
 
