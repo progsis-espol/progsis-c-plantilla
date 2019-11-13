@@ -4,9 +4,10 @@ Plantilla genérica para repositorios de proyectos desarrollados en el lenguaje 
 ## Descripción
 Este programa contiene código ejemplo de uso de lo siguiente:
 * Documentación de un repositorio usando *README.md*
-* Creación de un *Makefile*
+* Uso de un *Makefile* para compilar varios archivos
+* Uso de *.gitignore*
 * Parsing de opciones y argumentos usando *getopt*
-* Ingreso de texto usando *getline()*
+* Ingreso de texto desde consola usando *getline()*
 
 ## Uso del programa
 El programa tiene el siguiente funcionamiento:
