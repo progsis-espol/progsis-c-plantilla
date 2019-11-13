@@ -81,11 +81,11 @@ Para compilar el programa:
 ```
 $ make
 ```
-Para compilar usando usando la opción -g para facilitar la depuración con gdb:
+Para compilar facilitando la depuración con gdb:
 ```
 $ make debug
 ```
-Para compilar habilitando la herramienta *AddressSanitizer* para facilitar la depuración en tiempo de ejecución.
+Para compilar habilitando la herramienta AddressSanitizer, facilita la depuración en tiempo de ejecución:
 ```
 $ make sanitize
 ```
