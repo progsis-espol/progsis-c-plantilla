@@ -23,3 +23,7 @@ sanitize: clean programa
 .PHONY: clean
 clean:
 	rm -rf programa *.o
+
+.PHONY: run
+run: programa
+	./programa hola mundo
