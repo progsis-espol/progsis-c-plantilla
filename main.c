@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 	int opt, index;
 
 	/* Este lazo recorre los argumentos buscando las
-	opciones -e y -h... */
+	opciones -e, -h... */
 	while ((opt = getopt (argc, argv, "ieh")) != -1){
 		switch(opt)
 		{
@@ -41,7 +41,7 @@ int main(int argc, char **argv)
 			default:
 				fprintf(stderr, "uso: %s [-i] [-e] [arg 1] [arg 2] ... [arg n]\n", argv[0]);
 				fprintf(stderr, "     %s -h\n", argv[0]);
-				return -1;
+				return 1;
 		}
 	}
 
@@ -64,4 +64,6 @@ int main(int argc, char **argv)
 	/* El programa se invocó sin usar opciones o argurmentos */
 	if(argc == 1)
 		print_help(argv[0]);
+
+	return 0;
 }
